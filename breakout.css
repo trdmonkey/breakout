@@ -1,12 +1,13 @@
 body {
     text-align: center;
+    background-color: #4C4C4C;
 }
 
 #board {
     background-color: black;
-    border-top: 5px solid green;
-    border-left: 5px solid green;
-    border-right: 5px solid green;
-    border-bottom: 5px solid greenyellow;
+    border-top: 5px solid gray;
+    border-left: 5px solid gray;
+    border-right: 5px solid gray;
+    border-bottom: 5px solid gainsboro;
     border-radius: 2px;
 }

@@ -110,7 +110,7 @@ function update() {
     context.clearRect(0, 0, board.width, board.height);
 
     // Player
-    context.fillStyle = "yellowgreen";
+    context.fillStyle = "gainsboro";
     context.fillRect(player.x, player.y, player.width, player.height);
 
     // Ball
