@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+#board {
+    background-color: black;
+    border-top: 5px solid green;
+    border-left: 5px solid green;
+    border-right: 5px solid green;
+    border-bottom: 5px solid greenyellow;
+    border-radius: 2px;
+}
