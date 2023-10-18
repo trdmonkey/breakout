@@ -99,8 +99,11 @@ function touchMove(event) {
 // Oyente de evento táctil para reiniciar el juego
 function touchEnd(event) {
     event.preventDefault();
-    resetGame();
+    if (gameOver) {
+        resetGame();
+    }
 }
+
 
 function update() {
     requestAnimationFrame(update);
