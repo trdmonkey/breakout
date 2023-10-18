@@ -71,11 +71,35 @@ window.onload = function() {
     context.fillStyle = "yellowgreen";
     context.fillRect(player.x, player.y, player.width, player.height);
 
+    board.addEventListener("touchstart", touchStart);
+    board.addEventListener("touchmove", touchMove);
+    board.addEventListener("touchend", touchEnd);
+
     requestAnimationFrame(update);
     document.addEventListener("keydown", movePlayer);
 
     // Crear bloques
     createBlocks();
+}
+
+// Oyente de evento táctil para comenzar el movimiento del jugador
+function touchStart(event) {
+    event.preventDefault(); // Evitar comportamiento predeterminado del toque
+    var touch = event.touches[0]; // Obtener el primer toque
+    player.x = touch.clientX - board.getBoundingClientRect().left - player.width / 2;
+}
+
+// Oyente de evento táctil para continuar moviendo al jugador
+function touchMove(event) {
+    event.preventDefault();
+    var touch = event.touches[0];
+    player.x = touch.clientX - board.getBoundingClientRect().left - player.width / 2;
+}
+
+// Oyente de evento táctil para reiniciar el juego
+function touchEnd(event) {
+    event.preventDefault();
+    resetGame();
 }
 
 function update() {
